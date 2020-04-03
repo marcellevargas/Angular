@@ -6,6 +6,6 @@ class Negociacoes {
         this._negociacoes.push(negociacao);
     }
     retornaNegociacao() {
-        return this._negociacoes;
+        return [].concat(this._negociacoes);
     }
 }

@@ -11,4 +11,7 @@
 -   Para escrever o tipo do array podemos escrever: 
     TIPO [] OU Array<TIPO> 
 
--   O "= []" significa que iremos inicializar um array vazio  
+-   O "= []" significa que iremos inicializar um array vazio
+
+-   Ao declarar um atributo de uma classe, que recebe a instancia
+    de outra classe o TypeScript já insere o tipo do atributo
