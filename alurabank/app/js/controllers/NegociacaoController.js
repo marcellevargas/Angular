@@ -1,6 +1,13 @@
 class NegociacaoController {
     constructor() {
         this._negociacoes = new Negociacoes();
+        /**Criei uma instancia da view e
+         * vou passar o seletor CSS da minha View por parâmetro
+         * esse id serve para informar aonde o nosso template
+         * precisa aparecer quando for renderizado
+         */
+        this._negociacoesView = new NegociacoesView('#negociacoesView');
+        this._mensagemView = new MensagemView('#mensagemView');
         /**document.querySelector usado para
          * pegar o elemento no html de acordo
          * com o id
@@ -8,6 +15,7 @@ class NegociacaoController {
         this._inputData = document.querySelector('#data');
         this._inputQuantidade = document.querySelector('#quantidade');
         this._inputValor = document.querySelector('#valor');
+        this._negociacoesView.update(this._negociacoes);
     }
     adiciona(event) {
         event.preventDefault();
@@ -24,5 +32,7 @@ class NegociacaoController {
             console.log(negociacao.valor);
             console.log(negociacao.volume);
         });
+        this._negociacoesView.update(this._negociacoes);
+        this._mensagemView.update('Negociaçãos adicionadas com sucesso');
     }
 }

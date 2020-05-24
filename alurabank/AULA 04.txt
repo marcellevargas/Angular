@@ -1,0 +1,8 @@
+- Como as duas Views criadas são parecidas
+    eu vou criar um arquivo chamado View.ts para armazenar
+    o código repetido.
+
+- Quando criamos uma propriedade com o modificador private, ele não
+    pode ser acessado pelas classes filhas, para resolver esse problema
+    utilizamos o modificador protected que garante que as classes filhas
+    acesso

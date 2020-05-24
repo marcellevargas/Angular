@@ -1,2 +1,17 @@
 - Para criar uma estrutura mais segura eu vou criar uma 
   uma View para armazenar as minhas negociações
+
+- Para evitar que alguem consiga modificar o meu código eu vou
+  utilizar um método do JavaScript chamado "concat", para concatenar
+  o meu array junto com outro array dentro
+
+- Para tipar o retorno de um método eu utilizo :TipoDado depois dos ()
+  do método
+
+- É uma boa pratica dizer qual o tipo de dado um método me retorna
+
+- Quando um método não for devolver nada é uma boa prática colocar
+  que o retorno é do tipo "void"
+
+- Criando uma view para exibir os dados e manipular a DOM sem precisar
+  inserir as informações no HTML

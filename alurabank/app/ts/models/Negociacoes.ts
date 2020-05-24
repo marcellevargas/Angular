@@ -7,11 +7,11 @@
 class Negociacoes {
     private _negociacoes: Negociacao[] = [];
 
-    adiciona(negociacao: Negociacao) {
-        this._negociacoes.push(negociacao);
+    adiciona(negociacao: Negociacao): void {
+       this._negociacoes.push(negociacao);
     }
 
-    paraArray() {
+    paraArray(): Negociacao[] {
         return [].concat(this._negociacoes);
     }
 }
