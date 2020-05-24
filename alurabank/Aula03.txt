@@ -1,0 +1,2 @@
+- Para criar uma estrutura mais segura eu vou criar uma 
+  uma View para armazenar as minhas negociações

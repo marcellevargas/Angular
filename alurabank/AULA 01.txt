@@ -1,0 +1,34 @@
+- Para criar o arquivo package.json eu utilizo o comando npm init 
+
+- Instalar o typecript = npm install typescript@2.3.2 --save-dev 
+
+- Dentro do node_modules tem o compilador de typescript
+
+- tsconfig.json =  é o arquivo de configuração que o compilador 
+    vai levar em consideração na hora da compilação
+
+    * o compilerOptions do tsconif.json armazena as
+    informações de como o arquivo pode ser compilado
+        * o target do compilerOptions armazena a versão da EcmaScript que
+        iremos traduzir 
+        *outDir: é aonde será inserido o resultado da compilação
+    * o include é aonde informamos quais são os arquivos que o TS 
+        precisa levar em conta para compilar e traduzir
+
+- criar um comando dentro do package.json para realizar esse comando:
+        * dentro de "script" inserir um atributo 
+        que recebe o valor = 'tsc'
+        * podemos dar qualquer nome para ela, mas no caso do curso
+            o nome utilizado foi "compile"
+        * quando fazer esse processo, fechar o VSCODE  e abrir novamente
+        * para rodar esse comando = "npm run compile"
+
+- para evitar que o tsc gere um arquivo js mesmo tendo erro 
+    eu adiciono a propriedade noEmitError que não permite 
+    a criação do JS com erros
+
+- para automatizar o processo de compilação eu vou criar um comando
+    no package.json para ficar observando qualquer modificação no meu arquivo de ts 
+    com o mesmo estilo do comando compile
+    "start": "tsc -w" -w significa watch
+

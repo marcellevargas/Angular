@@ -1,0 +1,10 @@
+- O controller é responsável por fazer a ponte entre o back entre
+    o cliente
+
+- O arquivo de controller precisa ser adicionado depois do 
+    model de Negociacao, pois o controller depende do model de Negociacao
+    para funcionar
+
+- Para que o typescript não assuma o tipo any implicitamente
+    usamos uma propriedade no tsconfig.json chamada noImplicityAny: true
+
