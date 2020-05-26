@@ -1,4 +1,4 @@
-class NegociacoesView extends View{
+class NegociacoesView extends View <Negociacoes> {
 
     /**
      * A função update recebe dentro do método innerHTML 

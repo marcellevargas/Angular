@@ -6,3 +6,6 @@
     pode ser acessado pelas classes filhas, para resolver esse problema
     utilizamos o modificador protected que garante que as classes filhas
     acesso
+
+- Eu posso tipar um tipo generico, basta colocar entre <T> ou qualquer outra letra.
+  desse modo essa classe é sempre do tipo generico

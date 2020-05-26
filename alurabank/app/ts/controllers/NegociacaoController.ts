@@ -1,9 +1,9 @@
 class NegociacaoController {
     // Classe para pegar os inputs
 
-    private _inputData: HTMLInputElement;
-    private _inputQuantidade: HTMLInputElement;
-    private _inputValor: HTMLInputElement;
+    private _inputData: JQuery;
+    private _inputQuantidade: JQuery;
+    private _inputValor: JQuery;
     private _negociacoes = new Negociacoes();
 
     /**Criei uma instancia da view e 
@@ -18,9 +18,9 @@ class NegociacaoController {
          * pegar o elemento no html de acordo
          * com o id  
          * */
-        this._inputData = <HTMLInputElement>document.querySelector('#data');
-        this._inputQuantidade = <HTMLInputElement>document.querySelector('#quantidade');
-        this._inputValor = <HTMLInputElement>document.querySelector('#valor');
+        this._inputData = $('#data');
+        this._inputQuantidade = $('#quantidade');
+        this._inputValor = $('#valor');
         this._negociacoesView.update(this._negociacoes);
     }
 
@@ -31,9 +31,9 @@ class NegociacaoController {
          * é preciso converter para o tipo correto
          */ 
         const negociacao = new Negociacao(
-            new Date(this._inputData.value.replace(/-/g, ',')),
-                parseInt(this._inputQuantidade.value),
-                parseFloat(this._inputValor.value)
+            new Date(this._inputData.val().replace(/-/g, ',')),
+                parseInt(this._inputQuantidade.val()),
+                parseFloat(this._inputValor.val())
         );
         
         this._negociacoes.adiciona(negociacao);

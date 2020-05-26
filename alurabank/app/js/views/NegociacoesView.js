@@ -3,9 +3,6 @@ class NegociacoesView extends View {
      * A função update recebe dentro do método innerHTML
      * o retorno da string template para renderizar
      */
-    update(model) {
-        this._elemento.innerHTML = this.template(model);
-    }
     template(model) {
         return ` <table class="table table-hover table-bordered">
                     <thead>

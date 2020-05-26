@@ -1,15 +1,13 @@
-class View<T> {
-    protected _elemento: Element;
+abstract class View<T> {
+    protected _elemento: JQuery;
     
     constructor(seletor: string) {
-        this._elemento = document.querySelector(seletor);
+        this._elemento = $(seletor);
     }
 
     update(model: T) {
-        this._elemento.innerHTML = this.template(model)
+        this._elemento.html(this.template(model))
     }
 
-    public template(model: T): string {
-        return ;
-    }
+    abstract template(model: T): string;
 }
