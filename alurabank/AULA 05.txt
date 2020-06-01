@@ -1,2 +1,3 @@
 - tsd = typescript definition file é o arquivo que mapeia quais são os tipos que o typescript deve considerar
+- instalar o tsd npm install @types/jquery@2.0.42 --save-dev
 - para remover comentários na hora de fazer a compilação adicionar a propriedade "removeComents": true no tsconfig
