@@ -2,7 +2,11 @@ class AtendimentoController {
     private _inputData: JQuery;
     private _inputPaciente: JQuery;
     private _inputEspecialidade: JQuery;
+    
     private _atentimentos = new Atendimentos();
+    private _atendimentosView = new AtendimentosView('#atendimentosView');
+    private _mensagemView = new MensagemView('#mensagemView');
+
     constructor() {
         /**document.querySelector usado para 
          * pegar o elemento no html de acordo
@@ -11,6 +15,7 @@ class AtendimentoController {
         this._inputData = $('#data');
         this._inputPaciente = $('#paciente');
         this._inputEspecialidade = $('#especialidade');
+        this._atendimentosView.update(this._atentimentos);
     }
 
       adiciona(event) {
@@ -31,6 +36,9 @@ class AtendimentoController {
             console.log(a.paciente);
             console.log(a.especialidade);
         })
+
+        this._atendimentosView.update(this._atentimentos);
+        this._mensagemView.update('Atendimento agendado com sucesso')
 
        }
 }

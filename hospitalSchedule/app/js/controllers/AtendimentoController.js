@@ -1,9 +1,12 @@
 class AtendimentoController {
     constructor() {
         this._atentimentos = new Atendimentos();
+        this._atendimentosView = new AtendimentosView('#atendimentosView');
+        this._mensagemView = new MensagemView('#mensagemView');
         this._inputData = $('#data');
         this._inputPaciente = $('#paciente');
         this._inputEspecialidade = $('#especialidade');
+        this._atendimentosView.update(this._atentimentos);
     }
     adiciona(event) {
         event.preventDefault();
@@ -15,5 +18,7 @@ class AtendimentoController {
             console.log(a.paciente);
             console.log(a.especialidade);
         });
+        this._atendimentosView.update(this._atentimentos);
+        this._mensagemView.update('Atendimento agendado com sucesso');
     }
 }
