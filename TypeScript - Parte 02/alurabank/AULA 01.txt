@@ -1,0 +1,16 @@
+- Criamos um namespace para agrupar classes em um arquivo e permitir que estejam disponíveis pelo autocomplete
+- Para que as casses dentro do namespace estejam disponíveis precisamos da palavra reservada antes do export
+- A sintaxe de módulos do ES2015 considera cada scrippt um módulo e através das instruções import e export 
+  é possível importar e exportar algos
+- Para não dar erro de compilação iremos adicionar o módulo System.js no tsconfig.json
+  e importar no index.html
+- Loaders usam o XMLHttpRequest (realizam requisições AJAX) para baixar os módulos
+- Para que a aplicação seja servida e possa realizar as requisições AJAX
+    npm install lite-server@2.3.0 --save-dev
+- O concurrently serve para executar 2 comandos no terminal ao mesmo tempo,
+  como eu quero executar no terminal o comando para inicializar o servidor para realizar
+  as requisições AJAX e manter a compilação em real time, é preciso instalar o
+  npm install concurrently@3.4.0 --save-dev 
+  e alterar o package.json
+- Estratégia de barrel (barril) = trata-se de armanezar todos os 
+  exports dentro de um arquivo só para disponibilizar para  restante do arquivo
