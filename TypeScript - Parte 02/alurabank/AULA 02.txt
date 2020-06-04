@@ -1,0 +1,3 @@
+- Quando eu tenho um objeto em que as suas propriedades não podem ser alteradas eu utilizo a declaração "readonly"
+- Mas se a intensão for garantir que nenhuma classe externa acesse essas propriedades eu preciso usar o private e colocar o get e set
+- strictNullChecks = propriedade adicionada ao tsconfig.json para não permitir que seja atribuido um valor null ou undefined a uma variavel que não tem por padrão o valor null ou undefined 
