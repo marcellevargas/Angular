@@ -1,3 +1,10 @@
 - Quando eu tenho um objeto em que as suas propriedades não podem ser alteradas eu utilizo a declaração "readonly"
 - Mas se a intensão for garantir que nenhuma classe externa acesse essas propriedades eu preciso usar o private e colocar o get e set
 - strictNullChecks = propriedade adicionada ao tsconfig.json para não permitir que seja atribuido um valor null ou undefined a uma variavel que não tem por padrão o valor null ou undefined 
+# Para atributos que, fora da classe, só podem ser lidos e não alterados o TypeScript
+  permite adiconar o modificador readonly
+# tipo never é aplicável à métodos ou funções que por algum motivo, planejado ou não, podem não terminar
+  sua execução de seu bloco
+# A diferença entre o tipo void e o tipo never é que apesar de indicar que a função ou método nada retorna,
+  indica que a função ou método executará até o fim, mesmo que não retorne nada.
+# 

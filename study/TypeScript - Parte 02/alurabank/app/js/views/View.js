@@ -13,7 +13,7 @@ System.register([], function (exports_1, context_1) {
                 update(model) {
                     let template = this.template(model);
                     if (this._escapar)
-                        template = template.replace(/<script>[\s\S]*?<\/script>/, '');
+                        template = template.replace(/<script>[\s\S]*?<\/script>/, "");
                     this._elemento.html(this.template(model));
                 }
             };

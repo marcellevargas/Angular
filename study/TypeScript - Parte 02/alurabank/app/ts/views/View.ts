@@ -1,26 +1,21 @@
-
 export abstract class View<T> {
+  
+  protected _elemento: JQuery;
+  private _escapar: Boolean;
 
-    protected _elemento: JQuery;
-    private _escapar: Boolean;
+  constructor(seletor: string, escapar?: boolean) {
+    this._elemento = $(seletor);
+    this._escapar = escapar;
+  }
 
-    constructor(seletor: string, escapar?: boolean) {
+  update(model: T) {
+    let template = this.template(model);
 
-        this._elemento = $(seletor);
-        this._escapar = escapar;
-    }
+    if (this._escapar)
+      template = template.replace(/<script>[\s\S]*?<\/script>/, "");
 
-    update(model: T) {
-        let template = this.template(model);
-        
-        if(this._escapar) 
-        template = template.replace(/<script>[\s\S]*?<\/script>/, '');
+    this._elemento.html(this.template(model));
+  }
 
-        this._elemento.html(this.template(model));
-    }
-
-    abstract template(model: T): string;
-
+  abstract template(model: T): string;
 }
-
-
