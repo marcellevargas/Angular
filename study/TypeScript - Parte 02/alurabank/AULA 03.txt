@@ -1,0 +1,27 @@
+#Teste de performance
+
+## utilizamos o objeto performance() com o performance.now() que retornar quantos milisegundos demorou para 
+   executar uma função
+
+#Decorator
+
+## É possivel encapsular parte do código utilizando os decorators
+
+## Para utilizar o experimental decorators é preciso adicionar ["experimentalDecorators": true] no tsconfig.json
+   
+## Organizar o projeto armazenar dentro de helpers
+
+ex:
+
+    # Um decorator sempre retorna uma função
+
+    export function logarTempoDeExecucao() {
+
+        #Essa função pode receber 3 tipos de parametros:
+            ##target: any => Classe do método no qual o decorador está definido. (nome da classe do decorator)
+            ##propertyKey: string => Nome do método no qual o decorador está definido (aonde o decorator foi utilizado)
+            ##descriptor: PropertyDescriptor => Descritores de propriedades do método no qual o decorador foi definido.
+            return function(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+            
+        }
+    }
